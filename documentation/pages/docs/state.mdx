@@ -23,38 +23,38 @@ With the exception of `xy`, `cancel` and `canceled` all the attributes below are
 ```jsx
 const bind = useXXXX(state => {
   const {
-    event,         // the source event
-    xy,            // [x,y] values (pointer position or scroll offset)
-    initial,       // xy value when the gesture started
-    intentional,   // is the gesture intentional
-    delta,         // movement delta (movement - previous movement)
-    offset,        // offset since the first gesture
-    lastOffset,    // offset when the last gesture started
-    movement,      // displacement between offset and lastOffset
-    velocity,      // momentum of the gesture per axis (in px/ms)
-    distance,      // offset distance per axis
-    direction,     // direction per axis
-    startTime,     // gesture start time
-    elapsedTime,   // gesture elapsed time
-    type,          // event type
-    target,        // event target
-    currentTarget, // event currentTarget
-    timeStamp,     // timestamp of the event
-    first,         // true when it's the first event
-    last,          // true when it's the last event
     active,        // true when the gesture is active
-    memo,          // value returned by your handler on its previous run
+    args,          // arguments you passed to bind (React only)
+    buttons,       // number of buttons pressed
     cancel,        // function you can call to interrupt some gestures
     canceled,      // whether the gesture was canceled (drag and pinch)
+    currentTarget, // event currentTarget
+    delta,         // movement delta (movement - previous movement)
+    distance,      // offset distance per axis
+    direction,     // direction per axis
     down,          // true when a mouse button or touch is down
-    buttons,       // number of buttons pressed
+    elapsedTime,   // gesture elapsed time
+    event,         // the source event
+    first,         // true when it's the first event
+    initial,       // xy value when the gesture started
+    intentional,   // is the gesture intentional
+    last,          // true when it's the last event
+    lastOffset,    // offset when the last gesture started
+    locked,        // whether document.pointerLockElement is set
+    memo,          // value returned by your handler on its previous run
+    movement,      // displacement between offset and lastOffset
+    offset,        // offset since the first gesture
+    target,        // event target
+    timeStamp,     // timestamp of the event
     touches,       // number of fingers touching the screen
-    args,          // arguments you passed to bind (React only)
+    type,          // event type
+    velocity,      // momentum of the gesture per axis (in px/ms)
+    xy,            // [x,y] values (pointer position or scroll offset)
+    
     ctrlKey,       // true when control key is pressed
     altKey,        // "      "  alt     "      "
     shiftKey,      // "      "  shift   "      "
     metaKey,       // "      "  meta    "      "
-    locked,        // whether document.pointerLockElement is set
     dragging,      // is the component currently being dragged
     moving,        // "              "              "  moved
     scrolling,     // "              "              "  scrolled
